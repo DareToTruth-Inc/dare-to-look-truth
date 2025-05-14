@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
@@ -25,19 +26,6 @@ const SignupSection = () => {
     }
   };
 
-  useEffect(() => {
-    const form = document.getElementById("earlyAccessForm");
-    form.addEventListener("submit", () => {
-      alert("Thanks for signing up! We'll be in touch.");
-    });
-    // Return a cleanup function to remove the event listener
-    return () => {
-      form.removeEventListener("submit", () => {
-        alert("Thanks for signing up! We'll be in touch.");
-      });
-    };
-  }, []);
-
   return (
     <section className="py-16 md:py-24 bg-primary" id="signup">
       <div className="container mx-auto px-4 md:px-6">
@@ -49,14 +37,14 @@ const SignupSection = () => {
             </p>
           </div>
 
-          <form id="earlyAccessForm" action="https://formspree.io/f/mwpowjeb" method="POST" className="space-y-6 max-w-md mx-auto">
-            <input type="hidden" name="_redirect" value="https://daretotruth.ca/" />
+          <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
                 type="email"
-                name="email"
                 placeholder="Your email"
                 className="h-12 text-base"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <Button 
