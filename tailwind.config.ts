@@ -46,7 +46,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#FF2C55',
+					DEFAULT: '#0EA5E9', // Changed from #FF2C55 to cyan color
 					foreground: '#FFFFFF'
 				},
 				popover: {
@@ -110,10 +110,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 5px rgba(255, 44, 85, 0.5)'
+						boxShadow: '0 0 5px rgba(14, 165, 233, 0.5)' // Changed from red to cyan
 					},
 					'50%': {
-						boxShadow: '0 0 20px rgba(255, 44, 85, 0.8)'
+						boxShadow: '0 0 20px rgba(14, 165, 233, 0.8)' // Changed from red to cyan
 					}
 				}
 			},
