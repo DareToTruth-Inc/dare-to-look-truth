@@ -23,7 +23,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="max-w-[700px] text-lg md:text-xl text-muted-foreground mb-4">
-            A bold new way to get honest ratings on your style from people nearby. 
+            A bold new way to get honest feedback on your authentic self from people nearby. 
             No filters. No fakery. Just raw, anonymous truth.
           </p>
           

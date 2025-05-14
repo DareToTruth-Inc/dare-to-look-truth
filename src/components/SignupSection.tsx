@@ -57,7 +57,7 @@ const SignupSection = () => {
             
             <div className="text-center space-y-4">
               <p className="text-sm text-muted-foreground">
-                Be among the first to try our beta version and shape the future of DareToTruth.
+                Be among the first to experience authentic social connection and shape the future of DareToTruth.
               </p>
               <div className="flex items-center justify-center space-x-4">
                 <div className="flex -space-x-2">

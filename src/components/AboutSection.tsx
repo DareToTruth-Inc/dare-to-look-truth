@@ -9,7 +9,7 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">About the App</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            DareToTruth is changing how we see ourselves through the eyes of others.
+            DareToTruth is changing how we see ourselves through the unfiltered lens of reality.
           </p>
         </div>
 
@@ -18,9 +18,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Camera className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Post Your Look</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">Express Yourself</h3>
             <p className="text-muted-foreground text-center">
-              Share your style anonymously and let the world be your mirror. No filters, no edits—just you.
+              Share your authentic self anonymously and let the world be your mirror. No filters, no edits—just you.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xl font-bold text-primary mb-3 text-center">Location-Based</h3>
             <p className="text-muted-foreground text-center">
-              Get feedback from people in your area. Different cities, different styles, different truths.
+              Connect with people in your area who share your reality. Different cities, different perspectives, different truths.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const AboutSection = () => {
             </div>
             <h3 className="text-xl font-bold text-primary mb-3 text-center">Raw Honesty</h3>
             <p className="text-muted-foreground text-center">
-              No sugar coating. Receive and give authentic feedback that helps you evolve your style.
+              No sugar coating. Receive and give authentic feedback that helps you discover your truth in a world of filters.
             </p>
           </div>
         </div>
