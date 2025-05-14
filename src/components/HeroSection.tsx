@@ -8,6 +8,14 @@ const HeroSection = () => {
     <section className="py-16 md:py-24 lg:py-32 urban-bg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
+          <div className="w-32 h-32 mb-4">
+            <img 
+              src="/lovable-uploads/76bab4a7-7d74-4235-b7dc-e1c48e8c8a78.png" 
+              alt="DareToTruth Logo" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary">
             <span className="block">Expose your look.</span>
             <span className="block">Get the Truth.</span>

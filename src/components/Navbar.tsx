@@ -31,7 +31,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8">
+              <img 
+                src="/lovable-uploads/76bab4a7-7d74-4235-b7dc-e1c48e8c8a78.png" 
+                alt="DareToTruth Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
             <span className="text-xl md:text-2xl font-bold text-primary">
               Dare<span className="text-accent">To</span>Truth
             </span>
