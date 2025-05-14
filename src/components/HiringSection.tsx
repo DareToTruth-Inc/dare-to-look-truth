@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Briefcase } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HiringSection = () => {
   return (
@@ -30,8 +31,8 @@ const HiringSection = () => {
               <li>• Social app experience</li>
               <li>• Security & privacy focus</li>
             </ul>
-            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white">
-              Apply Now
+            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white" asChild>
+              <Link to="/careers/developer">Apply Now</Link>
             </Button>
           </div>
 
@@ -50,8 +51,8 @@ const HiringSection = () => {
               <li>• Community building</li>
               <li>• Gen Z market insights</li>
             </ul>
-            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white">
-              Apply Now
+            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white" asChild>
+              <Link to="/careers/intern">Apply Now</Link>
             </Button>
           </div>
 
@@ -70,8 +71,8 @@ const HiringSection = () => {
               <li>• Content policy expertise</li>
               <li>• International compliance</li>
             </ul>
-            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white">
-              Apply Now
+            <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-white" asChild>
+              <Link to="/careers/legal">Apply Now</Link>
             </Button>
           </div>
         </div>
