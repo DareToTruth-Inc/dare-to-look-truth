@@ -18,9 +18,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Camera className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Express Yourself</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">Real World Social Media</h3>
             <p className="text-muted-foreground text-center">
-              Share your authentic self anonymously and let the world be your mirror. No filters, no edits—just you.
+              Share your authentic self and let people who see you in the real world be your mirror. No filters, no edits—just you.
             </p>
           </div>
 
@@ -28,9 +28,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Code className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Location-Based</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">Real Life Encounters Anytime</h3>
             <p className="text-muted-foreground text-center">
-              Connect with people in your area who share your reality. Different cities, different perspectives, different truths.
+              Never miss a connection — even if it's just a passing glance on the street.
             </p>
           </div>
 
@@ -38,9 +38,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Gavel className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Raw Honesty</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">Look Good, Eat Free</h3>
             <p className="text-muted-foreground text-center">
-              No sugar coating. Receive and give authentic feedback that helps you discover your truth in a world of filters.
+              Drop a look, earn a bite. Local cafés and restaurants may reward your vibe with deals or free food.
             </p>
           </div>
         </div>
