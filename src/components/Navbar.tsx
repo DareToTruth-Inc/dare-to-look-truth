@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -53,10 +52,12 @@ const Navbar = () => {
               <a href="#careers" className="text-primary/80 hover:text-accent font-medium transition-colors">
                 We're Hiring
               </a>
-              <a href="#signup" className="text-primary/80 hover:text-accent font-medium transition-colors">
-                Sign Up
-              </a>
-              <Button className="bg-accent hover:bg-accent/90 text-white btn-glow">
+              <Button
+                className="bg-accent hover:bg-accent/90 text-white btn-glow"
+                onClick={() => {
+                  window.location.hash = '#signup';
+                }}
+              >
                 Get Early Access
               </Button>
             </nav>
@@ -102,17 +103,11 @@ const Navbar = () => {
               </a>
               <a 
                 href="#signup" 
-                className="text-primary hover:text-accent font-medium px-4 py-2 rounded-md hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Sign Up
-              </a>
-              <Button 
                 className="bg-accent hover:bg-accent/90 text-white w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Early Access
-              </Button>
+              </a>
             </div>
           </nav>
         )}
