@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 urban-bg">
+    <section className="py-12 md:py-16 lg:py-24 urban-bg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
           <div className="w-32 h-32 mb-4">
@@ -31,6 +31,10 @@ const HeroSection = () => {
             <Button 
               className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg btn-glow"
               size="lg"
+              onClick={() => {
+                const element = document.getElementById('signup');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Get Early Access <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -44,8 +48,8 @@ const HeroSection = () => {
             </Button>
           </div>
           
-          <div className="mt-8 flex items-center justify-center">
-            <div className="relative w-full max-w-xl h-[500px] animate-float">
+          <div className="mt-6 flex items-center justify-center">
+            <div className="relative w-full max-w-xl h-[320px] animate-float">
               <div className="absolute inset-0 bg-black/5 rounded-3xl transform rotate-2"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl transform -rotate-2 animate-float"></div>
               <div className="absolute inset-0 flex items-center justify-center">

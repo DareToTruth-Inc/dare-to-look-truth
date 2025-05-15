@@ -1,30 +1,9 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 
 const SignupSection = () => {
   const { toast } = useToast();
-  const [email, setEmail] = React.useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email && /^\S+@\S+\.\S+$/.test(email)) {
-      toast({
-        title: "Success!",
-        description: "You've been added to our early access list.",
-        variant: "default",
-      });
-      setEmail("");
-    } else {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-    }
-  };
 
   return (
     <section className="py-16 md:py-24 bg-primary" id="signup">
@@ -37,22 +16,21 @@ const SignupSection = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
+          <form action="https://formspree.io/f/mwpowjeb" method="POST" className="space-y-6 max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3">
-              <Input
+              <input
                 type="email"
+                name="email"
                 placeholder="Your email"
-                className="h-12 text-base"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
                 required
+                className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               />
-              <Button 
+              <button 
                 type="submit" 
-                className="bg-accent hover:bg-accent/90 text-white h-12 px-6 btn-glow whitespace-nowrap"
+                className="bg-accent hover:bg-accent/90 text-white h-12 px-6 btn-glow whitespace-nowrap rounded-md inline-flex items-center justify-center"
               >
                 Sign Up
-              </Button>
+              </button>
             </div>
             
             <div className="text-center space-y-4">
