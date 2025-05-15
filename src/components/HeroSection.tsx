@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 urban-bg">
+    <section className="py-12 md:py-16 lg:py-20 urban-bg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
           <div className="w-32 h-32 mb-4">
@@ -27,25 +27,37 @@ const HeroSection = () => {
             No filters. No fakery. Just raw, anonymous truth.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg btn-glow"
-              size="lg"
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <form 
+              action="https://formspree.io/f/mwpowjeb" 
+              method="POST" 
+              className="flex flex-col sm:flex-row gap-2"
             >
-              Get Early Access <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+                className="h-12 rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              />
+              <button
+                type="submit"
+                className="bg-accent hover:bg-accent/90 text-white h-12 px-6 rounded-md btn-glow"
+              >
+                Get Early Access
+              </button>
+            </form>
             
             <Button 
               variant="outline" 
-              className="border-primary text-primary hover:bg-primary/5 px-8 py-6 text-lg"
-              size="lg"
+              className="border-primary text-primary hover:bg-primary/5 h-12 px-6"
             >
               Learn More
             </Button>
           </div>
           
-          <div className="mt-8 flex items-center justify-center">
-            <div className="relative w-full max-w-xl h-[500px] animate-float">
+          <div className="mb-8 flex items-center justify-center">
+            <div className="relative w-full max-w-xl h-[400px] animate-float">
               <div className="absolute inset-0 bg-black/5 rounded-3xl transform rotate-2"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl transform -rotate-2 animate-float"></div>
               <div className="absolute inset-0 flex items-center justify-center">
