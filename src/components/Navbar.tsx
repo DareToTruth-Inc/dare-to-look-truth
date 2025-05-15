@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -21,6 +22,13 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header 
@@ -54,9 +62,7 @@ const Navbar = () => {
               </a>
               <Button
                 className="bg-accent hover:bg-accent/90 text-white btn-glow"
-                onClick={() => {
-                  window.location.hash = '#signup';
-                }}
+                onClick={() => scrollToSection('signup')}
               >
                 Get Early Access
               </Button>
@@ -101,13 +107,15 @@ const Navbar = () => {
               >
                 We're Hiring
               </a>
-              <a 
-                href="#signup" 
+              <Button 
                 className="bg-accent hover:bg-accent/90 text-white w-full"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  scrollToSection('signup');
+                  setIsMenuOpen(false);
+                }}
               >
                 Get Early Access
-              </a>
+              </Button>
             </div>
           </nav>
         )}
