@@ -40,7 +40,9 @@ const SignupSection = () => {
           <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
+        
                 type="email"
+                name="sign_up_email"
                 placeholder="Your email"
                 className="h-12 text-base"
                 value={email}
