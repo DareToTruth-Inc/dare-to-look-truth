@@ -59,7 +59,7 @@ def application_form():
 def signupemail():
 
     
-    #网页里面不貌似没有对email设置“name”属性，我就暂时先叫'sign_up_email了，等找到再修改
+    #网页里面不貌似没有对email设置“name”属性，我就暂时先设置为'sign_up_email了
     sign_up_email = request.form.get('sign_up_email')
     signupemail.insert_one({
         "sign_up_email": sign_up_email
