@@ -1,19 +1,14 @@
-// emailSaver.js
-
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { MongoClient } from 'mongodb';
 
-
-const dbName = 'Dare_To_Truth';
-const collectionName = 'websitesignups'; 
+const uri = process.env.MONGODB_URI!;
+const dbName = 'Dare_To_Truth'; 
+const collectionName = 'websitesignups'; // 集合名
 
 let cachedClient: MongoClient | null = null;
 
-async function connectToDatabase() {
+async function connectToMongo() {
   if (cachedClient) return cachedClient;
-  const uri = process.env.MONGODB_URI;
-  if (!uri) throw new Error('Missing MONGODB_URI env variable');
-
   const client = new MongoClient(uri);
   await client.connect();
   cachedClient = client;
@@ -22,28 +17,28 @@ async function connectToDatabase() {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed. Use POST.' });
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   try {
-    const data = req.body;
-
-    if (!data || !data.email) {
-      return res.status(400).json({ error: 'Missing required fields.' });
-    }
-
-    const client = await connectToDatabase();
+    const client = await connectToMongo();
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
 
+    const formData = req.body;
+
+    if (!formData.email) {
+      return res.status(400).json({ error: 'Missing email field' });
+    }
+
     const result = await collection.insertOne({
-      ...data,
-      createdAt: new Date(),
+      ...formData,
+      submittedAt: new Date(),
     });
 
-    return res.status(200).json({ message: 'Saved to MongoDB', insertedId: result.insertedId });
+    return res.status(200).json({ message: 'Saved to MongoDB', id: result.insertedId });
   } catch (error) {
-    console.error('Error saving to MongoDB:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error('[MongoDB error]', error);
+    return res.status(500).json({ error: 'Internal Server Error' });
   }
 }
