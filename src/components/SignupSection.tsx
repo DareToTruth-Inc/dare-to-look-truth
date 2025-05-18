@@ -3,17 +3,29 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { saveEmailToMongo } from './emailSaver';
 
-const SignupSection = () => {
-  const { toast } = useToast();
-  const [email, setEmail] = React.useState("");
+export default function SignupSection() {
+  const [email, setEmail] = useState('');
 
-const handleSubmit = async () => {
-  const email = (document.getElementById('email') as HTMLInputElement).value;
-  await saveEmailToMongo(email);
-};
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
+    try {
+      const res = await fetch('./emailSaver', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await res.json();
+      console.log('Saved:', result);
+      setEmail('');
+    } catch (err) {
+      console.error('Error:', err);
+    }
+  };
 
 
   return (
