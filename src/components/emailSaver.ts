@@ -11,7 +11,7 @@ let cachedClient: MongoClient | null = null;
 
 async function connectToDatabase() {
   if (cachedClient) return cachedClient;
-  const uri = "mongodb+srv://sunxuan:kizunaai@cluster0.h6ecibg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  const uri = process.env.MONGODB_URI;
   if (!uri) throw new Error('Missing MONGODB_URI env variable');
 
   const client = new MongoClient(uri);
