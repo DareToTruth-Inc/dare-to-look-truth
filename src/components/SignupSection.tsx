@@ -8,16 +8,24 @@ const SignupSection = () => {
   const { toast } = useToast();
   const [email, setEmail] = React.useState("");
 
-const handleSubmit = async (email: string) => {
-  const res = await fetch("./emailSaver", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email }),
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const formData = {
+    email: (document.getElementById('email') as HTMLInputElement).value,
+    // 其他字段...
+  };
+
+  const res = await fetch('./emailSaver', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData),
   });
 
   const result = await res.json();
   console.log(result);
 };
+
 
 
   return (
@@ -35,6 +43,7 @@ const handleSubmit = async (email: string) => {
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
         
+                id="email"
                 type="email"
                 name="sign_up_email"
                 placeholder="Your email"
