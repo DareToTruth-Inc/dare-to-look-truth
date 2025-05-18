@@ -97,4 +97,3 @@ export default function SignupSection() {
   );
 };
 
-export default SignupSection;
