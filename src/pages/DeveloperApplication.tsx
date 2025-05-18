@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { toast } from "@/components/ui/use-toast";
 import { ArrowLeft } from 'lucide-react';
-import { saveApplicationToFile } from 'formInfo';
+import { saveApplicationToFile } from './formInfo';
 
 const DeveloperApplication = () => {
   const navigate = useNavigate();
