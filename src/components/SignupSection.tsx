@@ -3,30 +3,22 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { saveEmailAsJson } from './emailSaver';
 
 const SignupSection = () => {
   const { toast } = useToast();
   const [email, setEmail] = React.useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email && /^\S+@\S+\.\S+$/.test(email)) {
-      saveEmailAsJson(email);
-      toast({
-        title: "Success!",
-        description: "You've been added to our early access list.",
-        variant: "default",
-      });
-      setEmail("");
-    } else {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
-    }
-  };
+const handleSubmit = async (email: string) => {
+  const res = await fetch("./emailSaver", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email }),
+  });
+
+  const result = await res.json();
+  console.log(result);
+};
+
 
   return (
     <section className="py-16 md:py-24 bg-primary" id="signup">
