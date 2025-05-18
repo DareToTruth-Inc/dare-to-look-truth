@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { saveEmailAsJson } from 'emailSaver';
+import { saveEmailAsJson } from './emailSaver';
 
 const SignupSection = () => {
   const { toast } = useToast();
