@@ -8,7 +8,7 @@ const SignupSection = () => {
   const { toast } = useToast();
   const [email, setEmail] = React.useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     try {
       const res = await fetch('./emailSaver', {
