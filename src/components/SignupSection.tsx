@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 
- function SignupSection() {
+ const SignupSection = () =>  {
   const [email, setEmail] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
