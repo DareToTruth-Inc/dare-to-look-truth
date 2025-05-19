@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 
-export default function SignupSection() {
+ function SignupSection() {
   const [email, setEmail] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -97,3 +97,4 @@ export default function SignupSection() {
   );
 };
 
+export default SignupSection;
