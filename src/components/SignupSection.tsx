@@ -10,19 +10,20 @@ const SignupSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email && /^\S+@\S+\.\S+$/.test(email)) {
-      toast({
-        title: "Success!",
-        description: "You've been added to our early access list.",
-        variant: "default",
+    try {
+      const res = await fetch('./emailSaver', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
       });
-      setEmail("");
-    } else {
-      toast({
-        title: "Error",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      });
+
+      const result = await res.json();
+      console.log('Saved:', result);
+      setEmail('');
+    } catch (err) {
+      console.error('Error:', err);
     }
   };
 
