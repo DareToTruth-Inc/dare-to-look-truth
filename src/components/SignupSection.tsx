@@ -11,7 +11,7 @@ const SignupSection = () => {
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('./emailSaver', {
+      const res = await fetch('/api/emailSaver', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
