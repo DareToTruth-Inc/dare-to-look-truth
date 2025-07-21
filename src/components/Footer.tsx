@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -42,7 +43,11 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-white/70 hover:text-accent">Privacy Policy</a></li>
+              <li>
+                <Link to="/privacy" className="text-white/70 hover:text-accent">
+                  Privacy Policy
+                </Link>
+              </li>
               <li><a href="#" className="text-white/70 hover:text-accent">Terms of Service</a></li>
               <li><a href="#" className="text-white/70 hover:text-accent">Cookie Policy</a></li>
             </ul>
