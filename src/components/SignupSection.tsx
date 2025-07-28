@@ -9,23 +9,29 @@ const SignupSection = () => {
   const [email, setEmail] = React.useState("");
 
   const handleSubmit = async(e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const res = await fetch('/pages/api/emailSaver', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+  e.preventDefault();
+  try {
+    const res = await fetch('https://webportal-hbk9.onrender.com/save_email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
 
-      const result = await res.json();
-      console.log('Saved:', result);
-      setEmail('');
-    } catch (err) {
-      console.error('Error:', err);
-    }
-  };
+    
+    const result = await res.json();
+    console.log('Saved:', result);
+    toast({
+      title: "Thank you!",
+      description: "Your email has been saved.",
+    });
+    setEmail('');
+  } catch (err) {
+    console.error('Error:', err);
+  }
+};
+
 
   return (
     <section className="py-16 md:py-24 bg-primary" id="signup">
