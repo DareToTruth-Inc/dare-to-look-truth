@@ -11,7 +11,7 @@ const SignupSection = () => {
   const handleSubmit = async(e: React.FormEvent) => {
   e.preventDefault();
   try {
-    const res = await fetch('https://webportal-hbk9.onrender.com/save_email', {
+    const res = await fetch('https://backend-13z6.onrender.com/save_email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
