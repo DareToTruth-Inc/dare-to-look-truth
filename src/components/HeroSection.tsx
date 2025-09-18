@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -22,7 +21,11 @@ const HeroSection = () => {
       </div>
       <div className="absolute inset-0 bg-slate-900/70 -z-10" aria-hidden="true" />
       <div className="container relative z-10 mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center text-center gap-6 animate-fade-in
+    <section className="py-12 md:py-16 lg:py-20 urban-bg">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white animate-fade-in" style={{animationDelay: "0.2s"}}>
             <span className="block">Expose your look.</span>
             <span className="block">Get the Truth.</span>
@@ -34,6 +37,7 @@ const HeroSection = () => {
             No filters. No fakery. Just raw, anonymous truth.
           </p>
 
+
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button
               className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg btn-glow"
@@ -42,6 +46,7 @@ const HeroSection = () => {
             >
               Get Early Access <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+
 
             <Button
               variant="outline"
@@ -71,5 +76,3 @@ const HeroSection = () => {
     </section>
   );
 };
-
-export default HeroSection;
