@@ -11,6 +11,17 @@ const HeroSection = () => {
   };
 
   return (
+    <section className="relative overflow-hidden py-12 md:py-16 lg:py-20">
+      <div className="absolute inset-0 -z-20">
+        <img
+          src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=2000&q=80"
+          alt="Friends smiling while checking their phones in the city"
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-slate-900/70 -z-10" aria-hidden="true" />
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center text-center gap-6 animate-fade-in
     <section className="py-12 md:py-16 lg:py-20 urban-bg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
@@ -25,7 +36,7 @@ const HeroSection = () => {
             First Real World Social Media Ever!!
             No filters. No fakery. Just raw, anonymous truth.
           </p>
-         
+
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
             <Button
