@@ -1,0 +1,62 @@
+{
+  "brand": "DareToTruth",
+  "nav": {
+    "about": "About",
+    "careers": "We're Hiring",
+    "cta": "Get Early Access"
+  },
+  "hero": {
+    "line1": "Expose your look.",
+    "line2": "Get the Truth.",
+    "line3": "Join the movement.",
+    "tagline": "First Real World Social Media Ever!! No filters. No fakery. Just raw, anonymous truth."
+  },
+  "about": {
+    "title": "About the App",
+    "lead": "DareToTruth is changing how we see ourselves through the unfiltered lens of reality.",
+    "card1Title": "Real World Social Media",
+    "card1Body": "Share your authentic self and let people who see you in the real world be your mirror. No filters, no edits—just you.",
+    "card2Title": "Real Life Encounters Anytime",
+    "card2Body": "Never miss a connection — even if it's just a passing glance on the street.",
+    "card3Title": "Look Good, Eat Free",
+    "card3Body": "Drop a look, earn a bite. Local cafés and restaurants may reward your vibe with deals or free food.",
+    "quote": "In a world of filters, we're bringing back the truth.",
+    "quoteBy": "— DareToTruth Team"
+  },
+  "careers": {
+    "title": "We're Hiring",
+    "lead": "Join our team and help shape the future of authentic social feedback.",
+    "developers": "Developers",
+    "interns": "Interns",
+    "legal": "Legal Consultants",
+    "apply": "Apply Now",
+    "ctaLine": "Don't see a role that fits? We're always looking for passionate people.",
+    "contactUs": "Contact Us"
+  },
+  "signup": {
+    "title": "Get Early Access",
+    "lead": "Leave your email for early access & 1 month premium free",
+    "placeholder": "Your email",
+    "submit": "Sign Up",
+    "benefit1": "1 Month Free",
+    "benefit1Body": "Premium features unlocked",
+    "benefit2": "Priority Access",
+    "benefit2Body": "Get in before everyone else",
+    "benefit3": "Feature Input",
+    "benefit3Body": "Help shape our roadmap"
+  },
+  "footer": {
+    "links": "Links",
+    "careers": "Careers",
+    "earlyAccess": "Early Access",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "contact": "Contact",
+    "launch": "Launching July 2025 – Be the first to face the truth.",
+    "copyright": "All rights reserved."
+  }
+}
+
+

@@ -1,16 +1,18 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-primary text-white py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4">DareToTruth</h3>
+            <h3 className="text-xl font-bold mb-4">{t('brand')}</h3>
             <p className="text-white/70 mb-4">
-              The bold new app that brings honesty back to social feedback.
+              {t('hero.tagline')}
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/profile.php?id=61575872175113" className="text-white/70 hover:text-accent">
@@ -32,29 +34,29 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-4">Links</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.links')}</h3>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-white/70 hover:text-accent">About</a></li>
-              <li><a href="#careers" className="text-white/70 hover:text-accent">Careers</a></li>
-              <li><a href="#signup" className="text-white/70 hover:text-accent">Early Access</a></li>
+              <li><a href="#about" className="text-white/70 hover:text-accent">{t('nav.about')}</a></li>
+              <li><a href="#careers" className="text-white/70 hover:text-accent">{t('footer.careers')}</a></li>
+              <li><a href="#signup" className="text-white/70 hover:text-accent">{t('footer.earlyAccess')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-4">Legal</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/privacy" className="text-white/70 hover:text-accent">
-                  Privacy Policy
+                  {t('footer.privacy')}
                 </Link>
               </li>
-              <li><a href="#" className="text-white/70 hover:text-accent">Terms of Service</a></li>
-              <li><a href="#" className="text-white/70 hover:text-accent">Cookie Policy</a></li>
+              <li><a href="#" className="text-white/70 hover:text-accent">{t('footer.terms')}</a></li>
+              <li><a href="#" className="text-white/70 hover:text-accent">{t('footer.cookies')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <h3 className="text-xl font-bold mb-4">{t('footer.contact')}</h3>
             <div className="flex items-center space-x-2 text-white/70 mb-2">
               <Mail className="h-5 w-5" />
               <span>info@daretotruth.com</span>
@@ -68,10 +70,10 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-white/20 text-center">
           <p className="text-white/70 mb-2 text-lg font-bold">
-            Launching July 2025 – Be the first to face the truth.
+            {t('footer.launch')}
           </p>
           <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} DareToTruth. All rights reserved.
+            © {new Date().getFullYear()} DareToTruth. {t('footer.copyright')}
           </p>
         </div>
       </div>

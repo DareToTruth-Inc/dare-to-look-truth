@@ -3,9 +3,11 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
+import { useTranslation } from 'react-i18next';
 
 const SignupSection = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [email, setEmail] = React.useState("");
 
   const handleSubmit = async(e: React.FormEvent) => {
@@ -38,9 +40,9 @@ const SignupSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Get Early Access</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('signup.title')}</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Leave your email for early access & 1 month premium free
+              {t('signup.lead')}
             </p>
           </div>
 
@@ -50,7 +52,7 @@ const SignupSection = () => {
         
                 type="email"
                 name="sign_up_email"
-                placeholder="Your email"
+                placeholder={t('signup.placeholder') ?? 'Your email'}
                 className="h-12 text-base"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -60,7 +62,7 @@ const SignupSection = () => {
                 type="submit" 
                 className="bg-accent hover:bg-accent/90 text-white h-12 px-6 btn-glow whitespace-nowrap"
               >
-                Sign Up
+                {t('signup.submit')}
               </Button>
             </div>
             
@@ -83,16 +85,16 @@ const SignupSection = () => {
           
           <div className="mt-12 pt-8 border-t border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="text-xl font-bold text-primary">1 Month Free</h4>
-              <p className="text-muted-foreground">Premium features unlocked</p>
+              <h4 className="text-xl font-bold text-primary">{t('signup.benefit1')}</h4>
+              <p className="text-muted-foreground">{t('signup.benefit1Body')}</p>
             </div>
             <div>
-              <h4 className="text-xl font-bold text-primary">Priority Access</h4>
-              <p className="text-muted-foreground">Get in before everyone else</p>
+              <h4 className="text-xl font-bold text-primary">{t('signup.benefit2')}</h4>
+              <p className="text-muted-foreground">{t('signup.benefit2Body')}</p>
             </div>
             <div>
-              <h4 className="text-xl font-bold text-primary">Feature Input</h4>
-              <p className="text-muted-foreground">Help shape our roadmap</p>
+              <h4 className="text-xl font-bold text-primary">{t('signup.benefit3')}</h4>
+              <p className="text-muted-foreground">{t('signup.benefit3Body')}</p>
             </div>
           </div>
         </div>

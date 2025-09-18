@@ -1,0 +1,62 @@
+{
+  "brand": "Dare à la Vérité Inc.",
+  "nav": {
+    "about": "À propos",
+    "careers": "Nous recrutons",
+    "cta": "Accès anticipé"
+  },
+  "hero": {
+    "line1": "Montre ton look.",
+    "line2": "Obtiens la vérité.",
+    "line3": "Rejoins le mouvement.",
+    "tagline": "Le premier vrai réseau social du monde ! Sans filtres. Sans triche. Une vérité brute et anonyme."
+  },
+  "about": {
+    "title": "À propos de l'application",
+    "lead": "DareToTruth change la façon dont nous nous voyons à travers le prisme non filtré de la réalité.",
+    "card1Title": "Réseau social réel",
+    "card1Body": "Partage ton vrai toi et laisse les gens qui te voient dans la vraie vie être ton miroir.",
+    "card2Title": "Rencontres en vrai à tout moment",
+    "card2Body": "Ne rate plus une connexion — même si ce n'est qu'un regard dans la rue.",
+    "card3Title": "Beau look, repas offert",
+    "card3Body": "Fais un look, gagne une bouchée. Des cafés et restos locaux peuvent récompenser ton style.",
+    "quote": "Dans un monde de filtres, nous ramenons la vérité.",
+    "quoteBy": "— L'équipe DareToTruth"
+  },
+  "careers": {
+    "title": "Nous recrutons",
+    "lead": "Rejoins notre équipe et contribue à façonner l'avenir du feedback authentique.",
+    "developers": "Développeurs",
+    "interns": "Stagiaires",
+    "legal": "Juristes",
+    "apply": "Postuler",
+    "ctaLine": "Tu ne vois pas le bon poste ? Nous cherchons toujours des passionnés.",
+    "contactUs": "Nous contacter"
+  },
+  "signup": {
+    "title": "Accès anticipé",
+    "lead": "Laisse ton email pour l'accès anticipé et 1 mois premium offert",
+    "placeholder": "Ton email",
+    "submit": "S'inscrire",
+    "benefit1": "1 mois offert",
+    "benefit1Body": "Fonctionnalités premium débloquées",
+    "benefit2": "Accès prioritaire",
+    "benefit2Body": "Passe avant tout le monde",
+    "benefit3": "Co-construction",
+    "benefit3Body": "Aide à définir notre roadmap"
+  },
+  "footer": {
+    "links": "Liens",
+    "careers": "Carrières",
+    "earlyAccess": "Accès anticipé",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies",
+    "contact": "Contact",
+    "launch": "Lancement en juillet 2025 – Soyez les premiers à affronter la vérité.",
+    "copyright": "Tous droits réservés."
+  }
+}
+
+

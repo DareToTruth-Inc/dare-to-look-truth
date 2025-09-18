@@ -1,0 +1,62 @@
+{
+  "brand": "DareToTruth",
+  "nav": {
+    "about": "关于",
+    "careers": "正在招聘",
+    "cta": "抢先体验"
+  },
+  "hero": {
+    "line1": "Expose your look.",
+    "line2": "Get the Truth.",
+    "line3": "加入这场运动。",
+    "tagline": "全球首个真实世界社交应用！没有美颜，没有造假，只有真实且匿名的真相。"
+  },
+  "about": {
+    "title": "关于应用",
+    "lead": "DareToTruth 通过未加修饰的现实视角，改变我们看待自己的方式。",
+    "card1Title": "真实世界的社交媒体",
+    "card1Body": "展示最真实的自己，让在现实中见过你的人成为你的镜子。",
+    "card2Title": "随时随地的真实邂逅",
+    "card2Body": "不错过任何连接——即便只是街头的一次对视。",
+    "card3Title": "颜值高，吃得好",
+    "card3Body": "投下你的 look，收获一顿美味。附近咖啡馆或餐厅可能用优惠或免费餐回馈你的气场。",
+    "quote": "在充满滤镜的世界里，我们带回真相。",
+    "quoteBy": "— DareToTruth 团队"
+  },
+  "careers": {
+    "title": "正在招聘",
+    "lead": "加入我们，共同打造真实可信的社会化反馈未来。",
+    "developers": "开发者",
+    "interns": "实习生",
+    "legal": "法律顾问",
+    "apply": "申请",
+    "ctaLine": "没有合适岗位？我们一直在寻找有热情的伙伴。",
+    "contactUs": "联系我们"
+  },
+  "signup": {
+    "title": "抢先体验",
+    "lead": "留下邮箱获取早鸟资格，并享 1 个月高级版",
+    "placeholder": "你的邮箱",
+    "submit": "注册",
+    "benefit1": "1 个月免费",
+    "benefit1Body": "解锁高级功能",
+    "benefit2": "优先体验",
+    "benefit2Body": "先人一步加入",
+    "benefit3": "功能共创",
+    "benefit3Body": "一起制定产品路线图"
+  },
+  "footer": {
+    "links": "链接",
+    "careers": "招聘",
+    "earlyAccess": "抢先体验",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie 政策",
+    "contact": "联系",
+    "launch": "2025 年 7 月上线——率先直面真相。",
+    "copyright": "版权所有。"
+  }
+}
+
+

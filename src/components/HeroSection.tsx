@@ -2,33 +2,33 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  
+  // Background image path from public/images
+  const heroBg = encodeURI('/images/Social.png');
 
   return (
     <section className="relative overflow-hidden py-12 md:py-16 lg:py-20">
       <div className="absolute inset-0 -z-20">
-        <video
-          className="h-full w-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80"
-        >
-          <source src="https://cdn.coverr.co/videos/coverr-young-adults-using-their-phones-5687/1080p.mp4" type="video/mp4" />
-        </video>
+        <div
+          className="h-full w-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg})` }}
+          aria-hidden="true"
+        />
       </div>
       <div className="absolute inset-0 bg-slate-900/70 -z-10" aria-hidden="true" />
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
-          <div className="w-32 h-32 mb-4 animate-float">
+          <div className="w-32 h-32 mb-4 animate-float border-4 border-[#0EA5E9] rounded-none">
             <img 
               src="/lovable-uploads/76bab4a7-7d74-4235-b7dc-e1c48e8c8a78.png" 
               alt="DareToTruth Logo" 
@@ -36,15 +36,14 @@ const HeroSection = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary animate-fade-in" style={{animationDelay: "0.2s"}}>
-            <span className="block">Expose your look.</span>
-            <span className="block">Get the Truth.</span>
-            <span className="block text-accent">Join the movement.</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white animate-fade-in" style={{animationDelay: "0.2s"}}>
+            <span className="block">{t('hero.line1')}</span>
+            <span className="block">{t('hero.line2')}</span>
+            <span className="block text-accent">{t('hero.line3')}</span>
           </h1>
           
           <p className="max-w-[700px] text-lg md:text-xl text-muted-foreground mb-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
-            First Real World Social Media Ever!!
-            No filters. No fakery. Just raw, anonymous truth.
+            {t('hero.tagline')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
@@ -53,7 +52,7 @@ const HeroSection = () => {
               size="lg"
               onClick={() => scrollToSection('signup')}
             >
-              Get Early Access <ArrowRight className="ml-2 h-5 w-5" />
+              {t('nav.cta')} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <Button 
@@ -62,7 +61,7 @@ const HeroSection = () => {
               size="lg"
               onClick={() => scrollToSection('about')}
             >
-              Learn More
+              {t('nav.about')}
             </Button>
           </div>
           

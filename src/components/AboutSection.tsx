@@ -1,15 +1,17 @@
 
 import React from 'react';
 import { Code, Gavel, Camera } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-16 md:py-24 bg-primary/5" id="about">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">About the App</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">{t('about.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            DareToTruth is changing how we see ourselves through the unfiltered lens of reality.
+            {t('about.lead')}
           </p>
         </div>
 
@@ -18,9 +20,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Camera className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Real World Social Media</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">{t('about.card1Title')}</h3>
             <p className="text-muted-foreground text-center">
-              Share your authentic self and let people who see you in the real world be your mirror. No filters, no edits—just you.
+              {t('about.card1Body')}
             </p>
           </div>
 
@@ -28,9 +30,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Code className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Real Life Encounters Anytime</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">{t('about.card2Title')}</h3>
             <p className="text-muted-foreground text-center">
-              Never miss a connection — even if it's just a passing glance on the street.
+              {t('about.card2Body')}
             </p>
           </div>
 
@@ -38,9 +40,9 @@ const AboutSection = () => {
             <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4 mx-auto">
               <Gavel className="h-6 w-6 text-accent" />
             </div>
-            <h3 className="text-xl font-bold text-primary mb-3 text-center">Look Good, Eat Free</h3>
+            <h3 className="text-xl font-bold text-primary mb-3 text-center">{t('about.card3Title')}</h3>
             <p className="text-muted-foreground text-center">
-              Drop a look, earn a bite. Local cafés and restaurants may reward your vibe with deals or free food.
+              {t('about.card3Body')}
             </p>
           </div>
         </div>
@@ -48,9 +50,9 @@ const AboutSection = () => {
         <div className="mt-16 bg-gradient-to-r from-primary to-accent p-0.5 rounded-lg max-w-3xl mx-auto">
           <div className="bg-white p-6 rounded-lg">
             <blockquote className="text-xl md:text-2xl italic text-primary font-medium text-center">
-              "In a world of filters, we're bringing back the truth."
+              "{t('about.quote')}"
             </blockquote>
-            <p className="mt-4 text-right text-accent font-bold">— DareToTruth Team</p>
+            <p className="mt-4 text-right text-accent font-bold">{t('about.quoteBy')}</p>
           </div>
         </div>
       </div>

@@ -2,11 +2,17 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language.startsWith('fr') ? 'fr' : 'en';
+  const toggleLanguage = () => {
+    i18n.changeLanguage(currentLang === 'en' ? 'fr' : 'en');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,7 +53,7 @@ const Navbar = () => {
               />
             </div>
             <span className="text-xl md:text-2xl font-bold text-primary">
-              Dare<span className="text-accent">To</span>Truth
+              {t('brand')}
             </span>
           </div>
 
@@ -55,17 +61,24 @@ const Navbar = () => {
           {!isMobile && (
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-primary/80 hover:text-accent font-medium transition-colors">
-                About
+                {t('nav.about')}
               </a>
               <a href="#careers" className="text-primary/80 hover:text-accent font-medium transition-colors">
-                We're Hiring
+                {t('nav.careers')}
               </a>
               <Button
                 className="bg-accent hover:bg-accent/90 text-white btn-glow"
                 onClick={() => scrollToSection('signup')}
               >
-                Get Early Access
+                {t('nav.cta')}
               </Button>
+              <button
+                className="ml-4 rounded-md px-3 py-2 text-sm text-primary hover:bg-accent/10"
+                onClick={toggleLanguage}
+                aria-label="Toggle language"
+              >
+                {currentLang === 'en' ? 'EN' : 'FR'}
+              </button>
             </nav>
           )}
 
@@ -98,14 +111,14 @@ const Navbar = () => {
                 className="text-primary hover:text-accent font-medium px-4 py-2 rounded-md hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                {t('nav.about')}
               </a>
               <a 
                 href="#careers" 
                 className="text-primary hover:text-accent font-medium px-4 py-2 rounded-md hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
-                We're Hiring
+                {t('nav.careers')}
               </a>
               <Button 
                 className="bg-accent hover:bg-accent/90 text-white w-full"
@@ -114,8 +127,15 @@ const Navbar = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                Get Early Access
+                {t('nav.cta')}
               </Button>
+              <button
+                className="rounded-md px-3 py-2 text-sm"
+                onClick={toggleLanguage}
+                aria-label="Toggle language"
+              >
+                {currentLang === 'en' ? 'English' : 'Français'}
+              </button>
             </div>
           </nav>
         )}
