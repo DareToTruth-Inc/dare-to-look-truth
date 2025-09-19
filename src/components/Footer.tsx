@@ -50,7 +50,11 @@ const Footer = () => {
                   {t('footer.privacy')}
                 </Link>
               </li>
-              <li><a href="#" className="text-white/70 hover:text-accent">{t('footer.terms')}</a></li>
+              <li>
+                <Link to="/terms" className="text-white/70 hover:text-accent">
+                  {t('footer.terms')}
+                </Link>
+              </li>
               <li><a href="#" className="text-white/70 hover:text-accent">{t('footer.cookies')}</a></li>
             </ul>
           </div>
