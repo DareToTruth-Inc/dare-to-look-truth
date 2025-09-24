@@ -56,6 +56,31 @@
     "contact": "Contact",
     "launch": "Lancement en juillet 2025 – Soyez les premiers à affronter la vérité.",
     "copyright": "Tous droits réservés."
+  },
+  "expose": {
+    "title": "Chemise blanche & jupe noire",
+    "messagePlaceholder": "Envoyez un message (Like requis)",
+    "scores": {
+      "coordination": "COORDINATION",
+      "uniqueness": "ORIGINALITÉ DU STYLE",
+      "impression": "PREMIÈRE IMPRESSION"
+    },
+    "submitting": "Envoi…",
+    "thanks": "Merci pour votre avis !",
+    "downloadApp": "Télécharger l'app",
+    "appStoreAlt": "Télécharger sur l’App Store",
+    "email": {
+      "title": "Vérification de l'email",
+      "description": "Pour vérification, veuillez saisir votre email. Nous enverrons un code à 6 chiffres pour éviter le spam.",
+      "sendCode": "Envoyer le code",
+      "sentLabel": "Un code a été envoyé à {{email}}. Entrez le code à 6 chiffres pour vérifier.",
+      "codePlaceholder": "Code à 6 chiffres",
+      "verify": "Vérifier",
+      "verifying": "Vérification…",
+      "demoCode": "Code de démo : {{code}}",
+      "invalidEmail": "Veuillez saisir un email valide",
+      "invalidCode": "Code de vérification incorrect"
+    }
   }
 }
 

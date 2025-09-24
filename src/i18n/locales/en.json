@@ -56,6 +56,31 @@
     "contact": "Contact",
     "launch": "Launching July 2025 – Be the first to face the truth.",
     "copyright": "All rights reserved."
+  },
+  "expose": {
+    "title": "White Shirt & Black Skirt",
+    "messagePlaceholder": "Send a message (Like Required)",
+    "scores": {
+      "coordination": "COORDINATION",
+      "uniqueness": "STYLE UNIQUENESS",
+      "impression": "FIRST IMPRESSION"
+    },
+    "submitting": "Submitting…",
+    "thanks": "Thanks for your feedback!",
+    "downloadApp": "Download App",
+    "appStoreAlt": "Download on the App Store",
+    "email": {
+      "title": "Email Verification",
+      "description": "For verification purposes, please enter your email. We will send a 6-digit code to prevent spam.",
+      "sendCode": "Send Code",
+      "sentLabel": "A verification code has been sent to {{email}}. Enter the 6-digit code to verify.",
+      "codePlaceholder": "6-digit code",
+      "verify": "Verify",
+      "verifying": "Verifying…",
+      "demoCode": "Demo code: {{code}}",
+      "invalidEmail": "Please enter a valid email",
+      "invalidCode": "Incorrect verification code"
+    }
   }
 }
 
