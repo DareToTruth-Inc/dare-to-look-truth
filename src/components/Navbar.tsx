@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8">
               <img 
-                src="/lovable-uploads/76bab4a7-7d74-4235-b7dc-e1c48e8c8a78.png" 
+                src="/lovable-uploads/logo.png" 
                 alt="DareToTruth Logo" 
                 className="w-full h-full object-contain"
               />

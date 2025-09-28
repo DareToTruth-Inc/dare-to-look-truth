@@ -179,6 +179,26 @@ const Expose: React.FC = () => {
         </a>
       </div>
 
+      <div
+        className="fixed z-50"
+        style={{ top: 'calc(env(safe-area-inset-top) + 8px)', left: 'calc(env(safe-area-inset-left) + 12px)' }}
+      >
+        <a
+          href="https://www.daretotruth.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit DareToTruth website"
+          className="block"
+        >
+          <img
+            src="/lovable-uploads/logo.png"
+            alt="DareToTruth logo"
+            className="h-8 w-8 sm:h-9 sm:w-9 object-contain select-none border border-slate-300 rounded-none bg-white/95 backdrop-blur shadow-md"
+            draggable={false}
+          />
+        </a>
+      </div>
+
       {emailModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
           <div className="w-full max-w-[420px] rounded-2xl bg-white p-4 space-y-3 shadow-xl">

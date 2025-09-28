@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center gap-6 animate-fade-in">
           <div className="w-32 h-32 mb-4 animate-float border-4 border-[#0EA5E9] rounded-none">
             <img 
-              src="/lovable-uploads/76bab4a7-7d74-4235-b7dc-e1c48e8c8a78.png" 
+              src="/lovable-uploads/logo.png" 
               alt="DareToTruth Logo" 
               className="w-full h-full object-contain"
             />
