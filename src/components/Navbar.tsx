@@ -66,12 +66,19 @@ const Navbar = () => {
               <a href="#careers" className="text-primary/80 hover:text-accent font-medium transition-colors">
                 {t('nav.careers')}
               </a>
-              <Button
-                className="bg-accent hover:bg-accent/90 text-white btn-glow"
-                onClick={() => scrollToSection('signup')}
+              <a
+                href="#"
+                className="inline-block"
+                aria-label={t('expose.appStoreAlt')}
               >
-                {t('nav.cta')}
-              </Button>
+                <img
+                  src={currentLang === 'fr' 
+                    ? '/images/Download_on_the_App_Store_Badge_CAES_blk_082124.svg' 
+                    : '/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'}
+                  alt={t('expose.appStoreAlt')}
+                  className="h-[54px] w-auto"
+                />
+              </a>
               <button
                 className="ml-4 rounded-md px-3 py-2 text-sm text-primary hover:bg-accent/10"
                 onClick={toggleLanguage}
@@ -120,15 +127,20 @@ const Navbar = () => {
               >
                 {t('nav.careers')}
               </a>
-              <Button 
-                className="bg-accent hover:bg-accent/90 text-white w-full"
-                onClick={() => {
-                  scrollToSection('signup');
-                  setIsMenuOpen(false);
-                }}
+              <a 
+                href="#" 
+                className="inline-block px-4"
+                aria-label={t('expose.appStoreAlt')}
+                onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.cta')}
-              </Button>
+                <img
+                  src={currentLang === 'fr' 
+                    ? '/images/Download_on_the_App_Store_Badge_CAES_blk_082124.svg' 
+                    : '/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'}
+                  alt={t('expose.appStoreAlt')}
+                  className="h-[60px] w-auto"
+                />
+              </a>
               <button
                 className="rounded-md px-3 py-2 text-sm"
                 onClick={toggleLanguage}

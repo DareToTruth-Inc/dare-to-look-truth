@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -47,17 +47,22 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.6s"}}>
-            <Button 
-              className="bg-accent hover:bg-accent/90 text-white px-8 py-6 text-lg btn-glow"
-              size="lg"
-              onClick={() => scrollToSection('signup')}
+            <a
+              href="#"
+              aria-label={t('expose.appStoreAlt')}
+              className={`inline-flex items-center justify-center h-[72px] ${i18n.language?.startsWith('fr') ? 'w-[228px]' : 'w-[216px]'}`}
             >
-              {t('nav.cta')} <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            
+              <img
+                src={i18n.language?.startsWith('fr')
+                  ? '/images/Download_on_the_App_Store_Badge_CAES_blk_082124.svg'
+                  : '/images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'}
+                alt={t('expose.appStoreAlt')}
+                className="h-[72px] w-auto"
+              />
+            </a>
             <Button 
               variant="outline" 
-              className="border-primary text-primary hover:bg-primary/5 px-8 py-6 text-lg"
+              className={`border-primary text-primary hover:bg-primary/5 h-[72px] w-[216px] text-xl ${i18n.language?.startsWith('fr') ? 'sm:w-[228px]' : 'sm:w-[216px]'}`}
               size="lg"
               onClick={() => scrollToSection('about')}
             >

@@ -38,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#about" className="text-white/70 hover:text-accent">{t('nav.about')}</a></li>
               <li><a href="#careers" className="text-white/70 hover:text-accent">{t('footer.careers')}</a></li>
-              <li><a href="#signup" className="text-white/70 hover:text-accent">{t('footer.earlyAccess')}</a></li>
+              <li><a href="https://apps.apple.com/app/idXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-accent">{t('expose.downloadApp')}</a></li>
             </ul>
           </div>
           
